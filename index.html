@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajetória do Kyan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Trajetória do Kyan</h1>
+        </div>
+        <nav class="navbar">
+            <a href="https://open.spotify.com/intl-pt/artist/05qCf6M7E7AxizHVmrcPqh" target="_blank">Spotify</a>
+            <a href="https://www.instagram.com/kyanmaloka/" target="_blank">Instagram</a>
+            
+        </nav>
+    </header>
+
+    <!-- Perfil do Artista -->
+    <section class="artist-profile">
+        <div class="profile-info">
+            <img src="img/capa.jpeg" alt="Kyan" class="profile-img">
+            <div class="bio">
+                <h2>Sobre o Kyan</h2>
+                <p>Renan Mesquita da Silva, conhecido como Kyan, é um artista de trap brasileiro. Começou sua carreira no funk e
+                    foi ganhando destaque no cenário musical do trap com o lançamento de grandes sucessos como "Mandrake".</p>
+                <p>Com uma trajetória de sucesso crescente, Kyan se consolidou como uma das figuras mais influentes da cena trap no Brasil.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Músicas -->
+    <section class="music-list">
+        <h2>Músicas de Kyan</h2>
+        <div class="servicos">
+            <div class="card">
+                <img src="img/Kyan-Brinks.webp" style="width: 100%; height: auto;">
+                <div class="card-text">
+                    <h3>De Renan MC a Kyan</h3>
+                    <p>Renan Mesquita da Silva começou sua trajetória cantando na igreja e depois no funk. Aos 14 anos, decidiu explorar novos estilos até consolidar sua identidade no trap.</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>O Primeiro Sucesso</h3>
+                    <p>Ao mudar para o trap, lançou "Mandrake", que rapidamente viralizou e marcou sua entrada definitiva na cena musical.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/mu540.jpg" style="width: 100%; height: auto;">
+                <div class="card-text">
+                    <h3>As músicas mais populares</h3>
+                    <p>Entre os maiores sucessos de Kyan estão "Mandona", "Brazil", "Maassl Intencionada", "Baby Cê é Gata" e "Arrasta Pra China".</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>Feats de destaque</h3>
+                    <p>Algumas colaborações importantes incluem "The Box Medley 2", "Avisa Lá Pt 3" e "Cena de Crime".</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/ref e sua mae.jpeg" style="width: 70%; height: auto;">
+                <div class="card-text">
+                    <h3>Kyan e sua mãe</h3>
+                    <p>O artista frequentemente menciona sua mãe em suas músicas. "Nóis é Ruim e o Cabelo Ajuda" inclui a voz dela expressando orgulho pelo filho.</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>"Mãe"</h3>
+                    <p>A faixa "Mãe" reflete sobre o luto e a relação com sua família, trazendo um dos momentos mais emocionantes de sua carreira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player de Música -->
+    <section class="music-player">
+        <h3>Escute Kyan</h3>
+        <audio id="audioPlayer" controls>
+            <source src="KYAN & MU540 - Fantastico Mundo da Oakley (Bonus Track).mp3" type="audio/mp3">
+        </audio>
+    </section>
+
+    <!-- Próximos Shows -->
+    <section id="shows">
+        <h2>Próximos Shows</h2>
+        <div class="shows-container">
+            <div class="show-card">
+                <img src="img/show.jpeg" alt="Kyan em São Paulo">
+                <h3>São Paulo - SP</h3>
+                <p>15 de Abril, 2025</p>
+                <a href="https://www.evento.com/show-kyan-sp" target="_blank">Mais informações</a>
+            </div>
+            <div class="show-card">
+                <img src="img/show.jpeg" alt="Kyan no Rio de Janeiro">
+                <h3>Rio de Janeiro - RJ</h3>
+                <p>22 de Abril, 2025</p>
+                <a href="https://www.evento.com/show-kyan-rj" target="_blank">Mais informações</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Todos os direitos reservados | Kyan</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.volume = 0.5;
+            document.addEventListener('keydown', (event) => {
+                if (event.code === 'Space') {
+                    event.preventDefault();
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                    } else {
+                        audioPlayer.pause();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
